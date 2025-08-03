@@ -1,0 +1,40 @@
+1. Core JavaScript Concepts:
+
+Data Types: Understanding primitive data types (string, number, boolean, null, undefined, symbol, BigInt) and object types.
+var, let, and const: Differences in scope (global, function, block) and re-declaration/re-assignment.
+Hoisting: Explaining how variable and function declarations are moved to the top of their scope during compilation.
+Scope and Closures: Understanding lexical scoping and how closures allow access to outer function's scope from inner functions.
+this keyword: Explaining its dynamic nature and how its value is determined by the calling context.
+Prototypes and Prototypal Inheritance: Understanding how objects inherit properties and methods in JavaScript.
+Higher-Order Functions: Functions that take other functions as arguments or return functions.
+Callbacks, Promises, and Async/Await: Handling asynchronous operations in JavaScript.
+Event Loop: Understanding how JavaScript manages asynchronous tasks and the execution order of code.
+2. DOM Manipulation and Event Handling:
+
+DOM (Document Object Model): How JavaScript interacts with HTML elements.
+Event Handling: Attaching event listeners and handling user interactions (clicks, keypresses, form submissions).
+Event Bubbling vs. Event Capturing: Understanding event propagation.
+3. ES6+ Features:
+
+Arrow Functions: Syntax and this binding differences compared to regular functions.
+Destructuring: Extracting values from arrays and objects.
+Spread and Rest Operators: Their usage in various scenarios.
+Modules: Organizing and importing/exporting JavaScript code.
+4. Advanced Topics:
+
+Functional Programming Concepts: Pure functions, function composition, immutability.
+Error Handling: Using try...catch and other error management techniques.
+Performance Optimization: Tips for writing efficient JavaScript code.
+Debugging Techniques: Tools and methods for identifying and resolving issues.
+5. Coding Challenges:
+
+Array Manipulation: Sorting, filtering, mapping, reducing arrays.
+String Manipulation: Reversing strings, checking for palindromes, converting case.
+Algorithm Implementations: Factorial, Fibonacci sequence, prime number checks.
+
+6. Framework/Library Specific Questions (if applicable):
+
+React Hooks: If the role involves React, questions about useState, useEffect, etc.
+Specific Framework Concepts: Questions related to Angular, Vue, etc., depending on the job requirements.
+
+
