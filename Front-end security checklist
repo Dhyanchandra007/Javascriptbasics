@@ -1,0 +1,137 @@
+##################### Frontend Security Checklist ######################
+
+🔐 Authentication & Authorization
+1> Use OAuth2/OpenID Connect for secure auth flows
+
+2> Store tokens securely (prefer HttpOnly cookies over localStorage)
+
+3> Implement role-based access controls (RBAC) on frontend components
+
+4> Prevent route access with client-side guards and backend validation
+
+🧼 Input Validation & Sanitization
+
+1> Validate all inputs both on client and server
+
+2> Sanitize user-generated content before rendering (use libraries like DOMPurify)
+
+3> Escape output to avoid XSS attacks
+
+📦 Secure Session & Token Management
+1>  Use Secure, HttpOnly, and SameSite=Strict cookie flags
+
+2> Refresh access tokens using refresh tokens securely
+
+3> Avoid exposing sensitive info in URLs or query params
+
+🧱 Content Security
+1> Set a strong Content Security Policy (CSP) header
+
+2> Disallow inline scripts and styles
+
+3> Use Subresource Integrity (SRI) for third-party resources
+
+🛡️ Defense Against XSS & CSRF
+1> Use frameworks with built-in XSS protections (e.g., Angular, React)
+
+2> Implement anti-CSRF tokens
+
+3> Restrict cookie sharing with SameSite attributes
+
+🔒 HTTPS & Secure Headers
+1> Force HTTPS across all environments
+
+2> Use HSTS (Strict-Transport-Security header)
+
+3>  Set security headers:
+
+X-Content-Type-Options: nosniff
+
+X-Frame-Options: DENY
+
+Referrer-Policy: no-referrer
+
+Permissions-Policy
+
+📦 Dependency & Third-Party Security
+1> Keep frontend dependencies up-to-date
+
+2> Regularly scan for known vulnerabilities (e.g., using npm audit or Snyk)
+
+3> Audit and sandbox third-party scripts
+
+🕵️‍♂️ Logging & Monitoring
+1> Avoid logging sensitive data on the client side
+
+2>  Monitor unusual activity (e.g., excessive login attempts)
+
+3> Use client-side error tracking tools securely (e.g., Sentry)
+
+🚫 Miscellaneous Good Practices
+1> Disable autocomplete on sensitive input fields (e.g., password)
+
+2> Avoid exposing sensitive info through source maps
+3> Remove unused libraries and legacy code
+
+################ Common Frontend Security Vulnerabilities ###################
+
+1. Cross-Site Scripting (XSS)
+Attackers inject malicious scripts into web pages.
+
+Can steal cookies, hijack sessions, or deface UI.
+
+Types: Stored, Reflected, DOM-based.
+
+Fix: Sanitize inputs, use frameworks with built-in protections, and set Content Security Policy (CSP) headers2.
+
+2. Cross-Site Request Forgery (CSRF)
+Tricks users into performing actions they didn’t intend (e.g., transferring funds).
+
+Exploits authenticated sessions.
+
+Fix: Use CSRF tokens, SameSite cookies, and validate request origins3.
+
+3. Clickjacking
+Users are tricked into clicking hidden UI elements.
+
+Often used to hijack actions like “Like” or “Transfer”.
+
+Fix: Use X-Frame-Options and CSP frame-ancestors directives2.
+
+4. Insecure Storage (LocalStorage/SessionStorage)
+Storing sensitive data like JWTs in browser storage exposes it to XSS.
+
+Fix: Prefer HttpOnly cookies for tokens.
+
+5. Exposed API Keys or Secrets
+Hardcoded secrets in frontend code can be easily extracted.
+
+Fix: Keep secrets on the server and proxy sensitive requests.
+
+6. Dependency Risks
+Vulnerable third-party libraries can compromise the entire app.
+
+Fix: Regularly audit dependencies and use tools like Snyk or npm audit.
+
+7. CORS Misconfigurations
+Poorly configured CORS can expose APIs to unauthorized domains.
+
+Fix: Whitelist trusted origins and avoid wildcards (*) in production.
+
+8. Open Redirects
+Attackers redirect users to malicious sites via manipulated URLs.
+
+Fix: Validate redirect destinations and use relative paths.
+
+9. HTTPS Downgrades
+Stripping HTTPS allows attackers to intercept traffic.
+
+Fix: Enforce HTTPS and use HSTS headers.
+
+10. Man-in-the-Middle (MITM) Attacks
+Attackers intercept and alter communication between client and server.
+
+Fix: Use TLS, avoid mixed content, and validate certificates
+
+
+
