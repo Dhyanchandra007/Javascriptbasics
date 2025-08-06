@@ -1,0 +1,46 @@
+########### Program for VowelsandconsonantsSeprator #########
+
+function separateVowelsConsonants(str) {
+    let vovels='';
+    let constant='';
+   let vovelSet='aeiouAEIOU';
+
+  for (let char of str) {
+      if(vovelSet.includes(char)){
+        vovels+=char;
+      }else{
+        constant+=char;
+      }
+  }
+      return [vovels,constant]
+}
+const result=separateVowelsConsonants('Aadhya Yadav');
+console.log(result);
+
+########## Check for Palindrome ############
+
+function isPalindrome(str) {
+  const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const reversed = cleaned.split('').reverse().join('');
+  return cleaned === reversed;
+}
+
+// Example usage:
+console.log(isPalindrome("Madam"));           // true
+console.log(isPalindrome("Race ecar"));        // true
+console.log(isPalindrome("Hello, world!"));   // false
+
+🧠 How It Works
+replace() removes non-alphanumeric characters.
+
+toLowerCase() ensures case-insensitive comparison.
+
+split().reverse().join() reverses the string.
+
+Then it compares the cleaned original with the reversed version.
+
+#################      ##########################
+
+
+
+
